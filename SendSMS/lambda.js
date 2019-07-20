@@ -24,7 +24,7 @@ exports.handler = function (event, context, callback) {
         Limit: 10
     }, function (error, data) {
         if (error) {
-            console.log("cognito_idp.listUsers - failed", err);
+            console.log("cognito_idp.listUsers - failed", error);
             throw error;
         }
         console.log("list of users.");console.log(data);
