@@ -17,7 +17,6 @@ exports.handler = function (event, context, callback) {
         UserPoolId: "us-east-1_ZYvkePp7C",
         AttributesToGet: [
             "sub",
-            "name",
             "email",
             "phone_number"
         ],
