@@ -1,7 +1,9 @@
 {
   "name": "SendSMS",
   "version": "1.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "slappforge-sdk-xml": "0.0.5"
+  },
   "devDependencies": {
     "aws-sdk": "2.176.0"
   }
