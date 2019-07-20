@@ -4,6 +4,9 @@ const cognito_idp = new AWS.CognitoIdentityServiceProvider();
 const sns = new AWS.SNS();
 
 exports.handler = function (event, context, callback) {
+    console.log("Enter SMS API - Input event :" + JSON.stringify(event));
+    console.log("context :" + JSON.stringify(context));
+
     let receiver = event['receiver'];
     let sender = event['sender'];
     let message = event['message'];
@@ -27,6 +30,9 @@ exports.handler = function (event, context, callback) {
             throw error;
         }
         console.log("list of users.");console.log(data);
+        /**
+         * TODO : if no doesn't exist throw and exception.
+         */
     });
 
     sns.publish({
